@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Tic-Tac-Toe</title>
+    <title>Slot Game</title>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <h1>Tic-Tac-Toe</h1>
+    <h1>Slot Game</h1>
     <div class="board" id="board"></div>
     <div class="message" id="message"></div>
 
@@ -14,7 +14,7 @@
         const message = document.getElementById("message");
         const cells = [];
 
-        let currentPlayer = "X";
+        let currentPlayer = "M";
         let gameBoard = ["", "", "", "", "", "", "", "", ""];
 
         // Create and initialize the game board
@@ -31,8 +31,8 @@
                 gameBoard[index] = currentPlayer;
                 cells[index].textContent = currentPlayer;
                 cells[index].classList.add(currentPlayer);
-                cells[index].style.backgroundColor = currentPlayer === "X" ? "red" : "yellow";
-                currentPlayer = currentPlayer === "X" ? "O" : "X";
+                cells[index].style.backgroundColor = currentPlayer === "M" ? "red" : "yellow";
+                currentPlayer = currentPlayer === "M" ? "N" : "M";
                 checkWinner();
             }
         }
